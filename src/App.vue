@@ -2,7 +2,9 @@
 import { computed, ref, watch } from 'vue'
 import { useImageNasaStore } from './stores/imageStore'
 import { useTranslationStore } from './stores/translateStore'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n();
 const date = ref('');
 const translatedDescription = ref('');
 const translatedTitle = ref('');
@@ -39,6 +41,7 @@ watch(date, (newDate) => {
 </script>
 
 <template>
+  <h1>{{ t('title') }}</h1>
   <label>
     Coloque uma data daqui
     <input type="date" v-model="date" />
