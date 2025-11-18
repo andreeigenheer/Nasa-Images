@@ -14,8 +14,6 @@ const imageDayStore = computed(() => imageNasaStore.getImage);
 const imageTitle = computed(() => imageNasaStore.getImageTite);
 const imageDescription = computed(() => imageNasaStore.getImageDescription);
 
-
-
 const imageDay = () => {
  imageNasaStore.fetchImage(date.value)
 
