@@ -1,24 +1,24 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+
+import { aboutApp } from './modulos'
+
 import { useImageNasaStore } from './stores/imageStore'
 import { useTranslationStore } from './stores/translateStore'
-import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n();
-const date = ref('');
-const translatedDescription = ref('');
-const translatedTitle = ref('');
+const date = ref('')
+const translatedDescription = ref('')
+const translatedTitle = ref('')
 
-const imageNasaStore = useImageNasaStore();
-const translationStore = useTranslationStore();
+const imageNasaStore = useImageNasaStore()
+const translationStore = useTranslationStore()
 
-const imageDayStore = computed(() => imageNasaStore.getImage);
-const imageTitle = computed(() => imageNasaStore.getImageTite);
-const imageDescription = computed(() => imageNasaStore.getImageDescription);
+const imageDayStore = computed(() => imageNasaStore.getImage)
+const imageTitle = computed(() => imageNasaStore.getImageTite)
+const imageDescription = computed(() => imageNasaStore.getImageDescription)
 
 const imageDay = () => {
- imageNasaStore.fetchImage(date.value)
-
+  imageNasaStore.fetchImage(date.value)
 }
 
 watch(imageTitle, async (newTitle) => {
@@ -41,7 +41,9 @@ watch(date, (newDate) => {
 </script>
 
 <template>
-  <h1>{{ t('title') }}</h1>
+
+<aboutApp />
+
   <label>
     Coloque uma data daqui
     <input type="date" v-model="date" />
