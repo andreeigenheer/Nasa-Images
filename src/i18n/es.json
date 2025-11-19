@@ -1,3 +1,6 @@
 {
-    "title": "Imagens da NASA"
+  "About": {
+    "title": "¡Bienvenido!",
+    "subtitle": "Esta es una aplicación para explorar imágenes de la NASA."
+  }
 }

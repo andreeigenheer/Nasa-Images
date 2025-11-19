@@ -1,3 +1,6 @@
 {
-    "title": "NASA Images"
+  "About": {
+    "title": "Welcome!",
+    "subtitle": "This is an application to explore NASA images."
+  }
 }
